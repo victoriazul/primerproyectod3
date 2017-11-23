@@ -7,7 +7,7 @@ d3.json("datosPartidos.js", function(data){
     window.data = window
     
     //Escalas
-    escalatamanio = d3.scaleLinear ()
+    escalaX = d3.scaleLinear()
     .domain([0,10])
     .range([0,500])
     
@@ -28,7 +28,16 @@ d3.json("datosPartidos.js", function(data){
     .attr("cx", function(d) {return d.mediaAutoubicacion})
     .attr("r", 10)
     .attr("cy", 10)
+
+    ejeX = d3.axisBottom(escalaX)
     
+    
+    
+    
+    
+    
+    contenedor
+        .call(ejeX)
     
     
     
